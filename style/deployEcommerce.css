@@ -540,12 +540,16 @@ footer .copyright {
 }
 
 @media (max-width: 799px) {
+  .navbar-wrapper {
+    position: relative;
+  }
   #navbar {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    position: fixed;
+    /* position 為 absolute 且宣告絕對定位在 navbar-wrapper 身上時， slide menu 才會出現 */
+    position: absolute;
     top: 0px;
     right: -300px;
     height: 100vh;
